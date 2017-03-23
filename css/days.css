@@ -1,0 +1,275 @@
+body {
+    background-color: #d9eef2;
+}
+
+#date1, #date2 {
+    height: 4em;
+    margin: 2em auto;
+}
+
+#calculate {
+    margin: 3em auto 2em auto;
+}
+
+.box {
+    display: -webkit-flex;
+    display: flex;
+}
+
+.justify-center {
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
+.date-content {
+    background-color: #fff;
+    border: .125em dashed #d9eef2;
+    padding: 1em;
+}
+
+.date-icon {
+    width: 1.5em;
+    text-align: center;
+    -webkit-align-self: center;
+    align-self: center;
+}
+.date-year {
+    width: 5em;
+    margin-left: .75em;
+}
+.date-month {
+    width: 3.5em;
+    margin-left: .75em;
+}
+.date-day {
+    width: 3.5em;
+    margin-left: .75em;
+}
+
+.date-year-select {
+    width: 5em;
+}
+.date-month-select {
+    width: 3.5em;
+}
+.date-day-select {
+    width: 3.5em;
+}
+
+.calculate-button {
+    width: 4em;
+    height: 4em;
+    border-radius: 2em;
+    background-color: rgba(0, 144, 255, 0.5);
+    box-shadow: 0 0 0.5em 0.3em rgba(0, 144, 255, 0.5);
+}
+
+.calculate-text {
+    -webkit-align-self: center;
+    align-self: center;
+    font-family: '微软雅黑';
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+.letter-spacing-3 {
+    letter-spacing: .3em;
+}
+
+.calculate-error {
+    -webkit-animation: color-error 1s ease-out forwards;
+    -moz-animation: color-error 1s ease-out forwards;
+    animation: color-error 1s ease-out forwards;
+}
+
+@-webkit-keyframes color-error {
+    0%{color: #fff;}
+    50%{color: #f00;}
+    75%{color: #f00;}
+    100%{color: #fff;}
+}
+@-moz-keyframes color-error {
+    0%{color: #fff;}
+    50%{color: #f00;}
+    75%{color: #f00;}
+    100%{color: #fff;}
+}
+@keyframes color-error {
+    0%{color: #fff;}
+    50%{color: #f00;}
+    75%{color: #f00;}
+    100%{color: #fff;}
+}
+
+.calculate-running {
+    -webkit-animation: color-running 1s ease-out forwards;
+    -moz-animation: color-running 1s ease-out forwards;
+    animation: color-running 1s ease-out forwards;
+}
+.running-infinite {
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes color-running {
+    0%{color: #fff;}
+    50%{color: #ff9664;}
+    100%{color: #fff;}
+}
+@-moz-keyframes color-running {
+    0%{color: #fff;}
+    50%{color: #ff9664;}
+    100%{color: #fff;}
+}
+@keyframes color-running {
+    0%{color: #fff;}
+    50%{color: #ff9664;}
+    100%{color: #fff;}
+}
+
+.digit-content {
+    background-color: #fff;
+    border: .125em dashed #d9eef2;
+    padding: 1em;
+}
+
+.digit-container {
+    overflow: hidden;
+    width: 1.875em;
+    height: 3em;
+    border: .125em solid #a0a0a0;
+    border-radius: 0.25em;
+    background-color: #fafafa;
+    margin-right: .5em;
+}
+
+.digit-items {
+    -moz-transition-property: transform;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+}
+
+.digit {
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    align-items: center;
+    overflow: hidden;
+    font-size: 1.5em;
+    width: 1.25em;
+    height: 2em;
+}
+
+.digit-units {
+    -webkit-align-items: flex-end;
+    align-items: flex-end;
+    font-family: '微软雅黑';
+    font-size: 2em;
+    margin-left: .3125em;
+}
+
+/* css exp*/
+
+/* 全部变换到0 */
+.init-zero {
+    -moz-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    -moz-transition-duration: .5s;
+    -webkit-transition-duration: .5s;
+    transition-duration: .5s;
+}
+
+/* */
+.digit-1 {
+  -moz-transform: translateY(-3em);
+  -webkit-transform: translateY(-3em);
+  -ms-transform: translateY(-3em);
+  transform: translateY(-3em);
+  -moz-transition-duration: .8s;
+  -webkit-transition-duration: .8s;
+  transition-duration: .8s;
+}
+.digit-2 {
+  -moz-transform: translateY(-6em);
+  -webkit-transform: translateY(-6em);
+  -ms-transform: translateY(-6em);
+  transform: translateY(-6em);
+  -moz-transition-duration: 1.12s;
+  -webkit-transition-duration: 1.12s;
+  transition-duration: 1.12s;
+}
+.digit-3 {
+  -moz-transform: translateY(-9em);
+  -webkit-transform: translateY(-9em);
+  -ms-transform: translateY(-9em);
+  transform: translateY(-9em);
+  -moz-transition-duration: 1.44s;
+  -webkit-transition-duration: 1.44s;
+  transition-duration: 1.44s;
+}
+.digit-4 {
+  -moz-transform: translateY(-12em);
+  -webkit-transform: translateY(-12em);
+  -ms-transform: translateY(-12em);
+  transform: translateY(-12em);
+  -moz-transition-duration: 1.76s;
+  -webkit-transition-duration: 1.76s;
+  transition-duration: 1.76s;
+}
+.digit-5 {
+  -moz-transform: translateY(-15em);
+  -webkit-transform: translateY(-15em);
+  -ms-transform: translateY(-15em);
+  transform: translateY(-15em);
+  -moz-transition-duration: 2.08s;
+  -webkit-transition-duration: 2.08s;
+  transition-duration: 2.08s;
+}
+.digit-6 {
+  -moz-transform: translateY(-18em);
+  -webkit-transform: translateY(-18em);
+  -ms-transform: translateY(-18em);
+  transform: translateY(-18em);
+  -moz-transition-duration: 2.4s;
+  -webkit-transition-duration: 2.4s;
+  transition-duration: 2.4s;
+}
+.digit-7 {
+  -moz-transform: translateY(-21em);
+  -webkit-transform: translateY(-21em);
+  -ms-transform: translateY(-21em);
+  transform: translateY(-21em);
+  -moz-transition-duration: 2.72s;
+  -webkit-transition-duration: 2.72s;
+  transition-duration: 2.72s;
+}
+.digit-8 {
+  -moz-transform: translateY(-24em);
+  -webkit-transform: translateY(-24em);
+  -ms-transform: translateY(-24em);
+  transform: translateY(-24em);
+  -moz-transition-duration: 3.04s;
+  -webkit-transition-duration: 3.04s;
+  transition-duration: 3.04s;
+}
+.digit-9 {
+  -moz-transform: translateY(-27em);
+  -webkit-transform: translateY(-27em);
+  -ms-transform: translateY(-27em);
+  transform: translateY(-27em);
+  -moz-transition-duration: 3.36s;
+  -webkit-transition-duration: 3.36s;
+  transition-duration: 3.36s;
+}
+.digit-0 {
+  -moz-transform: translateY(-30em);
+  -webkit-transform: translateY(-30em);
+  -ms-transform: translateY(-30em);
+  transform: translateY(-30em);
+  -moz-transition-duration: 3.68s;
+  -webkit-transition-duration: 3.68s;
+  transition-duration: 3.68s;
+}
